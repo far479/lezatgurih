@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restoran Lezat Gurih</title>
+    <style>
+        
+        html {
+            scroll-behavior: smooth; 
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        .nav {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: #ff9800;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+        section:last-of-type {
+            border-bottom: none;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        video {
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+        ul, ol {
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #777;
+            font-size: 14px;
+        }
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 15px;
+        }
+        .menu-table th,
+        .menu-table td {
+            border: 1px solid #ddd;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+        .menu-table th {
+            background-color: #2c3e50;
+            color: #fff;
+            font-weight: bold;
+        }
+        .menu-table tbody tr:nth-child(even) {
+            background-color: #f7f7f7;
+        }
+        .menu-table tbody tr:hover {
+            background-color: #fff3e0;
+        }
+        @media (max-width: 600px) {
+            .menu-table {
+                font-size: 13px;
+            }
+            .menu-table th,
+            .menu-table td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi Landing Page (Anchor Link) -->
+    <div class="nav">
+        <a href="#home">Home</a>
+        <a href="#profil">Profil</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#kontak">Kontak</a>
+    </div>
+
+    <div class="container">
+
+        <!-- 1. BAGIAN HOME -->
+        <section id="home">
+            <h1>Restoran Lezat Gurih</h1>
+            <p>Selamat datang di Restoran Lezat Gurih! Kami menyajikan berbagai hidangan khas tradisional dan modern yang dibuat dari bahan-bahan segar berkualitas tinggi. Nikmati pengalaman kuliner yang tak terlupakan bersama keluarga dan teman-teman Anda.</p>
+            <video width="100%" controls>
+                <source src="MenuRestoranLezatGurih.mp4" type="video/mp4">
+                Video tidak didukung oleh browser Anda.
+            </video>
+        </section>
+
+        <!-- 2. BAGIAN PROFIL -->
+        <section id="profil">
+            <h2>Profil Restoran</h2>
+            <p>Restoran Lezat Gurih didirikan pada tahun 2020 dengan misi membawa cita rasa masakan nusantara autentik dipadu sentuhan modern ke tengah keluarga Indonesia. Koki profesional kami berpengalaman lebih dari 15 tahun dalam menyajikan hidangan berkualitas tinggi yang higienis dan lezat.</p>
+        </section>
+
+        <!-- 3. BAGIAN MENU -->
+        <section id="menu">
+            <h2>Cara Pemesanan Makanan</h2>
+            <p>Ikuti langkah-langkah mudah di bawah ini untuk melakukan pemesanan hidangan favorit Anda:</p>
+            <ol>
+                <li><strong>Lihat Buku Menu:</strong> Pilih kategori dan jenis makanan atau minuman yang ingin Anda nikmati.</li>
+                <li><strong>Tentukan Pilihan:</strong> Tentukan menu pilihan Anda, mulai dari makanan utama hingga dessert penutup.</li>
+                <li><strong>Panggil Pelayan:</strong> Sampaikan pesanan Anda kepada pelayan kami yang bertugas di meja.</li>
+                <li><strong>Tunggu Proses Pembuatan:</strong> Pesanan Anda akan segera dimasak dan disiapkan secara higienis.</li>
+                <li><strong>Nikmati Hidangan:</strong> Makanan siap disajikan di meja Anda. Selamat menikmati!</li>
+            </ol>
+
+            <br>
+            <h2>Daftar Harga Menu Restoran &amp; Kategori</h2>
+            <p>Berikut adalah rincian kategori menu makanan, minuman, dan dessert beserta harganya:</p>
+            
+            <!-- Nested List Kategori Menu -->
+            <ul>
+                <li>
+                    <strong>Makanan Utama</strong>
+                    <!-- Tabel Daftar Makanan Utama -->
+                    <table class="menu-table">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Nama Menu</th>
+                                <th>Harga (Rp)</th>
+                                <th>Harga (&dollar;)</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>Nasi Goreng Spesial</strong></td>
+                                <td>Rp 25.000</td>
+                                <td>&dollar;1.65</td>
+                                <td><em>Nasi goreng dengan telur, ayam suwir, bakso, dan kerupuk</em></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><strong>Ayam Bakar Madu</strong></td>
+                                <td>Rp 30.000</td>
+                                <td>&dollar;2.00</td>
+                                <td><em>Ayam bakar bumbu madu gurih manis, disajikan sambal &amp; lalapan</em></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><strong>Soto Ayam Kampung</strong></td>
+                                <td>Rp 22.000</td>
+                                <td>&dollar;1.45</td>
+                                <td><em>Soto kuah kuning gurih, koya, dan suwiran ayam kampung</em></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+                <br>
+                <li>
+                    <strong>Minuman</strong>
+                    <table class="menu-table">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Nama Menu</th>
+                                <th>Harga (Rp)</th>
+                                <th>Harga (&dollar;)</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>Es Teh Manis Segar</strong></td>
+                                <td> Rp 5.000</td>
+                                <td>&dollar;0.35</td>
+                                <td><em>(Teh seduh alami disajikan dingin)</em></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><strong>Jus Alpukat Kocok</strong></td>
+                                <td>Rp 15.000</td>
+                                <td>&dollar;1.00</td>
+                                <td><em>(Jus alpukat murni dengan topping kental manis cokelat)</em></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                     
+                </li>
+                <br>
+                <li>
+                    <strong>Dessert (Makanan Penutup)</strong>
+                    <table class="menu-table">
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Nama Menu</th>
+                                <th>Harga (Rp)</th>
+                                <th>Harga (&dollar;)</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><strong>Puding Cokelat Vla Vanila</strong></td>
+                                <td> Rp 12.000</td>
+                                <td>&dollar;0.80</td>
+                                <td><em>(Puding lembut rasa cokelat disiram saus vla vanila manis)</em></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 4. BAGIAN ABOUT -->
+        <section id="about">
+            <h2>Tentang Kami</h2>
+            <p>Kami percaya bahwa makanan yang enak berasal dari bahan-bahan yang dipilih dengan penuh cinta dan ketulusan. Restoran Lezat Gurih berkomitmen untuk terus menjaga kualitas rasa serta memberikan pelayanan terbaik bagi setiap pelanggan yang datang.</p>
+        </section>
+
+        <!-- 5. BAGIAN KONTAK -->
+        <section id="kontak">
+            <h2>Informasi &amp; Alamat Restoran</h2>
+            <p>
+                <strong>Alamat:</strong> Jl. Kuliner Nusantara No. 123, Jakarta Selatan<br>
+                <strong>Jam Operasional:</strong> Setiap Hari (10.00 &ndash; 22.00 WIB)<br>
+                <strong>Telepon / WhatsApp:</strong> 0812-3456-7890
+            </p>
+        </section>
+
+        <!-- Hak Cipta -->
+        <footer>
+            <p>&copy; 2026 Restoran Lezat Gurih. Semua Hak Cipta Dilindungi Undang-Undang.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
