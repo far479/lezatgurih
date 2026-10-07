@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan - Restoran Tanjung Pinang</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navigasi */
+        header {
+            background-color: #222;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #ff9800;
+        }
+
+        /* Konten Utama / Form */
+        .container {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            color: #1b365d;
+            margin-bottom: 5px;
+            font-size: 26px;
+        }
+
+        p.subtitle {
+            margin-bottom: 25px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .form-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border: 1px solid #ddd;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #24425c;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        input:focus, select:focus {
+            border-color: #1b365d;
+        }
+
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .checkbox-item, .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .sub-input {
+            margin-top: 8px;
+            margin-left: 24px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #eee;
+            margin: 20px 0;
+        }
+
+        button[type="submit"] {
+            background-color: #1b365d;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #24425c;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="profil.html">PROFIL</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="registrasi.html" class="active">REGISTRASI</a></li>
+                <li><a href="kontak.html">KONTAK</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Konten Formulir Pemesanan -->
+    <div class="container">
+        <h1>Formulir Pemesanan & Booking</h1>
+        <p class="subtitle">Silakan isi formulir di bawah ini untuk melakukan pemesanan menu atau booking tempat di Restoran Tanjung Pinang.</p>
+
+        <div class="form-card">
+            <form action="#" method="POST">
+                
+                <!-- Nama Lengkap -->
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap:</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" required>
+                </div>
+
+                <!-- No HP -->
+                <div class="form-group">
+                    <label for="hp">No HP / WhatsApp:</label>
+                    <input type="tel" id="hp" name="hp" placeholder="Contoh: 081234567890" required>
+                </div>
+
+                <!-- Tanggal Booking -->
+                <div class="form-group">
+                    <label for="tanggal">Tanggal Booking / Pemesanan:</label>
+                    <input type="date" id="tanggal" name="tanggal" required>
+                </div>
+
+                <hr>
+
+                <!-- Kategori Menu (Checkbox) & Jumlah Item (Textbox) -->
+                <div class="form-group">
+                    <label>Pilih Kategori Menu & Jumlah Item[cite: 5]:</label>
+                    
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="makanan" name="kategori[]" value="Makanan Utama">
+                            <label for="makanan" style="margin-bottom:0; font-weight:normal;">Makanan Utama</label>
+                        </div>
+                        <div class="sub-input">
+                            <input type="number" name="jumlah_makanan" min="0" placeholder="Jumlah item makanan">
+                        </div>
+
+                        <div class="checkbox-item" style="margin-top: 10px;">
+                            <input type="checkbox" id="minuman" name="kategori[]" value="Minuman">
+                            <label for="minuman" style="margin-bottom:0; font-weight:normal;">Minuman</label>
+                        </div>
+                        <div class="sub-input">
+                            <input type="number" name="jumlah_minuman" min="0" placeholder="Jumlah item minuman">
+                        </div>
+
+                        <div class="checkbox-item" style="margin-top: 10px;">
+                            <input type="checkbox" id="dessert" name="kategori[]" value="Dessert">
+                            <label for="dessert" style="margin-bottom:0; font-weight:normal;">Dessert (Makanan Penutup)</label>
+                        </div>
+                        <div class="sub-input">
+                            <input type="number" name="jumlah_dessert" min="0" placeholder="Jumlah item dessert">
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- Pilihan Pembayaran (Radio Button) -->
+                <div class="form-group">
+                    <label>Pilihan Pembayaran[cite: 5]:</label>
+                    
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="pay_cc" name="pembayaran" value="Kartu Debit/Kredit" required>
+                            <label for="pay_cc" style="margin-bottom:0; font-weight:normal;">Kartu Debit/Kredit berlogo Visa / Mastercard[cite: 5]</label>
+                        </div>
+                        <div class="sub-input">
+                            <input type="text" name="nomor_kartu" placeholder="Masukkan nomor kartu (16 digit)">
+                        </div>
+
+                        <div class="radio-item" style="margin-top: 10px;">
+                            <input type="radio" id="pay_wallet" name="pembayaran" value="Dompet Digital">
+                            <label for="pay_wallet" style="margin-bottom:0; font-weight:normal;">Dompet Digital dengan logo e-wallet[cite: 5]</label>
+                        </div>
+                        <div class="sub-input">
+                            <select name="pilihan_dompet">
+                                <option value="">-- Pilih Dompet Digital --</option>
+                                <option value="GoPay">GoPay</option>
+                                <option value="OVO">OVO</option>
+                                <option value="DANA">DANA</option>
+                                <option value="ShopeePay">ShopeePay</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tombol Submit -->
+                <div class="form-group" style="margin-top: 30px;">
+                    <button type="submit">Submit / Kirim Data</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - Restoran Tanjung Pinang</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navigasi */
+        header {
+            background-color: #222;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #ff9800;
+        }
+
+        /* Konten Utama */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            color: #1b365d;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        /* Audio Player */
+        .audio-container {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .audio-box {
+            background: #eaeaea;
+            padding: 10px 15px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        audio {
+            outline: none;
+            height: 35px;
+        }
+
+        /* Bagian Profil & Cerita Restoran */
+        .profile-content {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            margin-top: 15px;
+        }
+
+        .profile-content h2 {
+            color: #1b365d;
+            margin-bottom: 15px;
+            font-size: 22px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 8px;
+        }
+
+        .profile-content h3 {
+            color: #24425c;
+            margin: 20px 0 10px 0;
+            font-size: 18px;
+        }
+
+        .profile-content p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #555;
+            text-align: justify;
+        }
+
+        .profile-content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .profile-content li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="profil.html" class="active">PROFIL</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="registrasi.html">REGISTRASI</a></li>
+                <li><a href="kontak.html">KONTAK</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Konten Halaman -->
+    <div class="container">
+        <h1>Restoran Tanjung Pinang</h1>
+
+        <!-- Deskripsi Profil Panjang / Story -->
+        <div class="profile-content">
+            <h2>Sejarah & Latar Belakang Perjalanan Kami</h2>
+            <p>
+                <strong>Restoran Tanjung Pinang</strong> didirikan pada tahun 2020 dengan membawa misi besar untuk melestarikan serta menyebarluaskan cita rasa masakan Nusantara yang autentik, kaya rempah, dan dipadu dengan sentuhan penyajian modern yang hangat ke tengah-tengah keluarga Indonesia. Berawal dari sebuah impian sederhana untuk mengenalkan kekayaan kuliner khas pesisir dan tradisional, restoran ini tumbuh menjadi salah satu destinasi kuliner favorit bagi masyarakat lokal maupun wisatawan.
+            </p>
+            <p>
+                Nama "Tanjung Pinang" dipilih sebagai simbol kebanggaan atas kekayaan budaya serta tradisi maritim nusantara yang lekat dengan kelezatan hidangan laut segar (seafood) dan racikan bumbu rahasia turun-temurun. Koki profesional kami berpengalaman lebih dari 15 tahun dalam meracik bumbu tradisional pilihan, mendedikasikan keahlian mereka untuk menyajikan hidangan berkualitas tinggi yang higienis, lezat, dan menggugah selera di setiap gigitannya.
+            </p>
+
+            <h3>Filosofi & Komitmen Kami</h3>
+            <p>
+                Berlokasi strategis dan mengusung konsep ruang yang nyaman, bersih, serta ramah keluarga, kami selalu memegang teguh komitmen untuk memberikan pengalaman bersantap yang tak terlupakan. Setiap bahan baku yang masuk ke dapur kami diseleksi secara ketat setiap hari demi memastikan kesegaran dan keamanannya, bebas dari bahan pengawet berbahaya.
+            </p>
+
+            <h3>Visi & Misi Restoran Tanjung Pinang</h3>
+            <ul>
+                <li><strong>Visi:</strong> Menjadi restoran keluarga pilihan utama yang menyajikan kuliner nusantara berkualitas tinggi dengan standar pelayanan terbaik di tingkat nasional.</li>
+                <li><strong>Misi:</strong> 
+                    <br>1. Konsisten menjaga keaslian rasa dan kualitas higienitas menu makanan maupun minuman.
+                    <br>2. Memberikan pelayanan yang ramah, cepat, dan profesional demi kepuasan mutlak pelanggan.
+                    <br>3. Terus berinovasi dalam ragam menu tanpa menghilangkan esensi budaya kuliner tradisional Indonesia.
+                </li>
+            </ul>
+
+            <p>
+                Kami percaya bahwa makanan yang baik tidak hanya mengenyangkan perut, tetapi juga mampu merajut kehangatan kebersamaan. Terima kasih telah menjadikan Restoran Tanjung Pinang sebagai bagian dari momen spesial bersama keluarga dan orang-orang terkasih Anda.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

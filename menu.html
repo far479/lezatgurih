@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Restoran Tanjung Pinang</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Navigasi */
+        header {
+            background-color: #222;
+            padding: 15px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #ff9800;
+        }
+
+        /* Konten Utama */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            color: #1b365d;
+            margin-bottom: 10px;
+            font-size: 26px;
+        }
+
+        p.subtitle {
+            margin-bottom: 25px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* Kategori Menu */
+        .category-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 25px 0 10px 0;
+            color: #222;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Tabel Menu */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #24425c;
+            color: white;
+            text-align: left;
+            padding: 12px 15px;
+            font-size: 14px;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+            color: #333;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fdfdfd;
+        }
+
+        /* Lebar Kolom Tertentu */
+        th.col-no, td.col-no {
+            width: 8%;
+            text-align: center;
+        }
+        
+        th.col-price, td.col-price {
+            width: 15%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="profil.html">PROFIL</a></li>
+                <li><a href="menu.html" class="active">MENU</a></li>
+                <li><a href="registrasi.html">REGISTRASI</a></li>
+                <li><a href="kontak.html">KONTAK</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Konten Halaman -->
+    <div class="container">
+        <h1>Daftar Harga Menu Restoran & Kategori</h1>
+        <p class="subtitle">Berikut adalah rincian kategori menu makanan, minuman, dan dessert beserta harganya:</p>
+
+        <!-- Kategori 1: Makanan Utama -->
+        <div class="category-title">• Makanan Utama</div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="col-no">No.</th>
+                    <th>Nama Menu</th>
+                    <th class="col-price">Harga (Rp)</th>
+                    <th class="col-price">Harga ($)</th>
+                    <th>Keterangan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-no">1</td>
+                    <td><strong>Nasi Goreng Spesial</strong></td>
+                    <td>Rp 25.000</td>
+                    <td>$1.65</td>
+                    <td>Nasi goreng dengan telur, ayam suwir, bakso, dan kerupuk</td>
+                </tr>
+                <tr>
+                    <td class="col-no">2</td>
+                    <td><strong>Ayam Bakar Madu</strong></td>
+                    <td>Rp 30.000</td>
+                    <td>$2.00</td>
+                    <td>Ayam bakar bumbu madu gurih manis, disajikan sambal & lalapan</td>
+                </tr>
+                <tr>
+                    <td class="col-no">3</td>
+                    <td><strong>Soto Ayam Kampung</strong></td>
+                    <td>Rp 22.000</td>
+                    <td>$1.45</td>
+                    <td>Soto kuah kuning gurih, koya, dan suwiran ayam kampung</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Kategori 2: Minuman -->
+        <div class="category-title">• Minuman</div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="col-no">No.</th>
+                    <th>Nama Menu</th>
+                    <th class="col-price">Harga (Rp)</th>
+                    <th class="col-price">Harga ($)</th>
+                    <th>Keterangan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-no">1</td>
+                    <td><strong>Es Teh Manis Segar</strong></td>
+                    <td>Rp 5.000</td>
+                    <td>$0.35</td>
+                    <td>(Teh seduh alami disajikan dingin)</td>
+                </tr>
+                <tr>
+                    <td class="col-no">2</td>
+                    <td><strong>Jus Alpukat Kocok</strong></td>
+                    <td>Rp 15.000</td>
+                    <td>$1.00</td>
+                    <td>(Jus alpukat murni dengan topping kental manis cokelat)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Kategori 3: Dessert -->
+        <div class="category-title">• Dessert (Makanan Penutup)</div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="col-no">No.</th>
+                    <th>Nama Menu</th>
+                    <th class="col-price">Harga (Rp)</th>
+                    <th class="col-price">Harga ($)</th>
+                    <th>Keterangan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-no">1</td>
+                    <td><strong>Puding Cokelat Vla Vanila</strong></td>
+                    <td>Rp 12.000</td>
+                    <td>$0.80</td>
+                    <td>(Puding lembut rasa cokelat disiram saus vla vanila manis)</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+</html>
